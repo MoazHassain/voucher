@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher Entry</title>
+    <!-- <link type="text/css" href="./style/materialize.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link type="text/css" href="../style/FormCss.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <style>
+      .vertical { 
+            border-left: 1px solid #4b4c52; 
+            height: 25px; 
+            /* position: flex;  */
+            left: 10%; 
+            
+        } 
+    </style>
+
+</head>
+<body>
+  <div class="container">
+    <section id="topappbar">
+            <header class="mdc-top-app-bar">
+              <nav class="z-depth-0">
+                <div class="mdc-top-app-bar__row">
+                  <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+                    <a href="../Voucher_Index.html"><span class="mdc-top-app-bar__title">Form</span></a>
+
+                    
+                  </section>
+              
+                  <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
+                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+                  </section>
+                </div>
+              </nav>
+              </header>
+
+        </section>
+
+        <section id="drawer">
+            <aside class="mdc-drawer mdc-drawer--modal">
+                <div class="mdc-drawer__content">
+                  <nav class="mdc-list">
+                    <a class="mdc-list-item mdc-list-item--activated" href="../Voucher_Index.html" aria-current="page" tabindex="0">
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                      <span class="mdc-list-item__text">Home</span>
+                    </a>
+                    <hr class="mdc-list-divider">
+                    <a class="mdc-list-item" href="#">
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                      <span class="mdc-list-item__text">Dashboard</span>
+                    </a>
+                    
+                    <a class="mdc-list-item" href="#" >
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
+                      <span class="mdc-list-item__text">Settings</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
+                      <span class="mdc-list-item__text">Inventory</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                      <span class="mdc-list-item__text">Sales</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                      <span class="mdc-list-item__text">Drafts</span>
+                    </a>
+              
+                    <hr class="mdc-list-divider">
+                    <h6 class="mdc-list-group__subheader">Labels</h6>
+                    <a class="mdc-list-item" href="./Voucher_Entry.html">
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+                      <span class="mdc-list-item__text">Voucher Entry</span>
+                    </a>
+                    <a class="mdc-list-item" href="./Purchase_Entry.html">
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+                      <span class="mdc-list-item__text">Purchase Entry</span>
+                    </a>
+                    <a class="mdc-list-item" href="./Sales_Entry.html">
+                      <span class="mdc-list-item__ripple"></span>
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+                      <span class="mdc-list-item__text">Sales Entry</span>
+                    </a>
+                  </nav>
+                </div>
+              </aside>
+
+              
+          
+              
+            <div id="myDrawer" class="mdc-drawer-scrim"></div> 
+      </section>
+
+      <div class="app-body">
+        <section id=body-content>
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell--span-6">
+                <span class="material-icons" style="color: blue; margin: 6px; margin-right: 15px; ">
+                  ballot
+                  </span>
+                <span class="mdc-typography--headline5 text">New Voucher Entry</span>
+                
+              </div>
+              <div class="mdc-layout-grid__cell--span-5"></div>
+              
+                
+              
+              <div class="mdc-layout-grid__cell--span-1">
+                  <span class="mdc-typography--subtitle1 text">Print</span>
+                
+                
+              </div>
+            </div>
+          </div>
+          <hr class="mdc-list-divider">
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell--span-3">
+
+                
+
+                <div  class="mdc-select mdc-select--filled demo-width-class">
+                  <div class="mdc-select__anchor">
+                    <span class="mdc-select__ripple"></span>
+                    <span class="mdc-select__selected-text"></span>
+                    <span class="mdc-select__dropdown-icon">
+                      <svg
+                          class="mdc-select__dropdown-icon-graphic"
+                          viewBox="7 10 10 5">
+                        <polygon
+                            class="mdc-select__dropdown-icon-inactive"
+                            stroke="none"
+                            fill-rule="evenodd"
+                            points="7 10 12 15 17 10">
+                        </polygon>
+                        <polygon
+                            class="mdc-select__dropdown-icon-active"
+                            stroke="none"
+                            fill-rule="evenodd"
+                            points="7 15 12 10 17 15">
+                        </polygon>
+                        
+                      </svg>
+                    </span>
+                    <span class="mdc-floating-label">Voucher Type</span>
+                    <span class="mdc-line-ripple"></span>
+                  </div>
+                 
+                  <div  class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                    <ul  class="mdc-list">
+                      
+                      <li id="1" class="mdc-list-item" name="optmenu" value="Dhaka" data-value="Dhaka">
+                          <span class="mdc-list-item__ripple"></span>
+                          <span class="mdc-list-item__text">Dhaka</span>
+                      </li>
+                      <li id="2" class="mdc-list-item" name="optmenu" value="Rajshahi" data-value="Rajshahi">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__text">Rajshahi</span>
+                      </li>
+                      <li id="3" class="mdc-list-item" name="optmenu" value="Chittagong" data-value="Chittagong">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__text">Chittagong</span>
+                      </li>
+                      <li id="4" class="mdc-list-item" name="optmenu" value="Rangpur" data-value="Rangpur">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__text">Rangpur</span>
+                      </li>
+                    
+                    </ul>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="mdc-layout-grid__cell--span-3">
+                <label class="mdc-text-field mdc-text-field--outlined">
+                  <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__notch">
+                      <span class="mdc-floating-label" id="my-label-id">Receive Date</span>
+                    </span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                  </span>
+                  <input type="number" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                </label>
+                
+              </div>
+              <div class="mdc-layout-grid__cell--span-3">
+                <label class="mdc-text-field mdc-text-field--outlined">
+                  <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__notch">
+                      <span class="mdc-floating-label" id="my-label-id">Delivery Date</span>
+                    </span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                  </span>
+                  <input type="number" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                </label>
+                
+              </div>
+              <div class="mdc-layout-grid__cell--span-1"></div>
+              <div class="mdc-layout-grid__cell--span-2">
+                <a class="  add-record" data-added="0"  >
+                <button id="btn" class="mdc-button mdc-button--outlined">
+                  <div class="mdc-button__ripple"></div>
+                  
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  
+                  
+                  <span class="mdc-button__label">Add</span>
+          
+                </button>
+                </a>    
+              </div>
+            </div>
+          </div>
+          <hr class="mdc-list-divider">
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-12">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th><span class="mdc-typography--headline6 text">#</span></th>
+                    <th><span class="mdc-typography--headline6 text">Account</span></th>
+                    <th><span class="mdc-typography--headline6 text">Party/Catagory</span></th>
+                    <th><span class="mdc-typography--headline6 text">Reference</span></th>
+                    <th><span class="mdc-typography--headline6 text">Debit</span></th>
+                    <th><span class="mdc-typography--headline6 text">Credit</span></th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody id="tbl_body">
+                <tr id="rec-1">
+                    <td>
+                        <div id="indValue" class="mdc-typography--subtitle1 text"><span class="sn">1</span>.</div>
+                    </td>
+                    <td>
+                      <div id="field">
+                        <label class="mdc-text-field mdc-text-field--outlined">
+                          <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__notch">
+                              <span class="mdc-floating-label" id="my-label-id">Name</span>
+                            </span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                          </span>
+                          <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                        </label>
+                      </div>
+                        
+                    </td>
+                    <td>
+                        <label class="mdc-text-field mdc-text-field--outlined">
+                            <span class="mdc-notched-outline">
+                              <span class="mdc-notched-outline__leading"></span>
+                              <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Name</span>
+                              </span>
+                              <span class="mdc-notched-outline__trailing"></span>
+                            </span>
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                          </label>
+                    </td>
+                    <td>
+                        <label class="mdc-text-field mdc-text-field--outlined">
+                            <span class="mdc-notched-outline">
+                              <span class="mdc-notched-outline__leading"></span>
+                              <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Name</span>
+                              </span>
+                              <span class="mdc-notched-outline__trailing"></span>
+                            </span>
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                          </label>
+                    </td>
+                    <td>
+                      <div id="nolabel">
+                        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                          <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                          </span>
+                          <input class="mdc-text-field__input" type="text" aria-label="Label">
+                        </label>
+                      </div>
+                        
+                    </td>
+                    <td>
+                        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                            <span class="mdc-notched-outline">
+                              <span class="mdc-notched-outline__leading"></span>
+                              <span class="mdc-notched-outline__trailing"></span>
+                            </span>
+                            <input class="mdc-text-field__input" type="text" aria-label="Label">
+                          </label>
+                    </td>
+                    <td>
+                        <pre>  </pre>
+                    </td>
+                    
+        
+                </tr>
+                <tr id="rec-2">
+                    <td>
+                        <div class="mdc-typography--subtitle1 text"><span class="sn">2</span>.</div>
+                    </td>
+                    <td>
+                        <label class="mdc-text-field mdc-text-field--outlined">
+                            <span class="mdc-notched-outline">
+                              <span class="mdc-notched-outline__leading"></span>
+                              <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Name</span>
+                              </span>
+                              <span class="mdc-notched-outline__trailing"></span>
+                            </span>
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                          </label>
+                    </td>
+                    <td>
+                        <label class="mdc-text-field mdc-text-field--outlined">
+                            <span class="mdc-notched-outline">
+                              <span class="mdc-notched-outline__leading"></span>
+                              <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Name</span>
+                              </span>
+                              <span class="mdc-notched-outline__trailing"></span>
+                            </span>
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                          </label>
+                    </td>
+                    <td>
+                        <label class="mdc-text-field mdc-text-field--outlined">
+                            <span class="mdc-notched-outline">
+                              <span class="mdc-notched-outline__leading"></span>
+                              <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Name</span>
+                              </span>
+                              <span class="mdc-notched-outline__trailing"></span>
+                            </span>
+                            <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                          </label>
+                    </td>
+                    <td>
+                        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                            <span class="mdc-notched-outline">
+                              <span class="mdc-notched-outline__leading"></span>
+                              <span class="mdc-notched-outline__trailing"></span>
+                            </span>
+                            <input class="mdc-text-field__input" type="text" aria-label="Label">
+                          </label>
+                    </td>
+                    <td>
+                        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                            <span class="mdc-notched-outline">
+                              <span class="mdc-notched-outline__leading"></span>
+                              <span class="mdc-notched-outline__trailing"></span>
+                            </span>
+                            <input class="mdc-text-field__input" type="text" aria-label="Label">
+                          </label>
+                    </td>
+                    <td>
+                        <div id="delIcon">
+                          <a  class="material-icons  delete-record"  data-id="2">delete </a>
+                        </div>
+                    </td>
+                    
+        
+                </tr>
+            </tbody>
+            
+        </table>
+        <div style="display:none;">
+            <table id="sample_table">
+              <tr id="">
+               <td><div class="mdc-typography--subtitle1 text"><span class="sn"></span>.</div></td>
+                <td>
+                    <label class="mdc-text-field mdc-text-field--outlined">
+                        <span class="mdc-notched-outline">
+                          <span class="mdc-notched-outline__leading"></span>
+                          <span class="mdc-notched-outline__notch">
+                            <span class="mdc-floating-label" id="my-label-id">Name</span>
+                          </span>
+                          <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                      </label>   
+                </td>
+               <td>
+                    <label class="mdc-text-field mdc-text-field--outlined">
+                        <span class="mdc-notched-outline">
+                        <span class="mdc-notched-outline__leading"></span>
+                        <span class="mdc-notched-outline__notch">
+                            <span class="mdc-floating-label" id="my-label-id">Name</span>
+                        </span>
+                        <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+               </td>
+               <td>
+                    <label class="mdc-text-field mdc-text-field--outlined">
+                        <span class="mdc-notched-outline">
+                        <span class="mdc-notched-outline__leading"></span>
+                        <span class="mdc-notched-outline__notch">
+                            <span class="mdc-floating-label" id="my-label-id">Name</span>
+                        </span>
+                        <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+               </td>
+               <td>
+                    <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label" >
+                        <span class="mdc-notched-outline">
+                        <span class="mdc-notched-outline__leading"></span>
+                        <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input class="mdc-text-field__input" type="text" aria-label="Label">
+                    </label>
+               </td>
+               <td>
+                    <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                        <span class="mdc-notched-outline">
+                        <span class="mdc-notched-outline__leading"></span>
+                        <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input class="mdc-text-field__input" type="text" aria-label="Label">
+                    </label>
+               </td>
+               <td><a class="material-icons delete-record" data-id="1">delete </a></td>
+             </tr>
+           </table>
+         </div>
+            </div>
+            </div>
+        </div>
+          <hr class="mdc-list-divider">
+          <div>
+            <button class="mdc-button mdc-button--unelevated btn">  <span class="mdc-button__ripple"> </span> Submit</button>
+            
+              <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea mdc-text-field--no-label txtarea" >
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <span class="mdc-text-field__resizer">
+                <textarea class="mdc-text-field__input " rows="2" cols="70" aria-label="Label" ></textarea>
+              </span>
+            </label>
+
+           
+            
+          </div><br><br><br>
+        </section>
+      
+    </div>
+
+</div>
+
+<div class="footer" align="center">
+    <hr class="mdc-list-divider" >
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-4">
+        </div>
+        <div class="mdc-layout-grid__cell--span-4">
+          <span class="material-icons " style="color: #3B5998; margin-right: 10px; ">
+            info 
+            </span> 
+            <span class="mdc-typography--subtitle1 text" style="margin-right: 1em;">2015-2020</span>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-skype"></a>
+
+        </div>
+        <div class="mdc-layout-grid__cell--span-4">
+        </div>
+
+      </div>
+    </div>
+    
+    
+  </div>
+
+      <!-- <div class="footer" align="center">
+        <hr class="mdc-list-divider" >
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-4">
+            </div>
+            <div class="mdc-layout-grid__cell--span-4">
+              <span class="material-icons " style="color: #3B5998; margin-right: 10px; ">
+                info 
+                </span> 
+                <span class="mdc-typography--subtitle1 text" style="margin-right: 1em;">2015-2020</span>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-skype"></a>
+
+            </div>
+            <div class="mdc-layout-grid__cell--span-4">
+            </div>
+
+          </div>
+        </div>
+        
+        
+      </div> -->
+</body>
+<script type="text/javascript" src="../Js/formJs.js"></script>
+<script>
+//   let inValue= document.getElementById("indValue").innerHTML;
+//     let field=document.getElementById("field").innerHTML;
+//     let emtField=document.getElementById("nolabel").innerHTML;
+//     let icon=document.getElementById("delIcon").innerHTML;
+//   function addRow(){
+    
+    
+//     let table =document.getElementsByTagName("table")[0];
+//     let newRow= table.insertRow();
+
+//     let cell1 = newRow.insertCell(0);
+//     let cell2=newRow.insertCell(1);
+//     let cell3=newRow.insertCell(2);
+//     let cell4=newRow.insertCell(3);
+//     let cell5=newRow.insertCell(4);
+//     let cell6=newRow.insertCell(5);
+//     let cell7=newRow.insertCell(6);
+//     inValue= ++inValue; 
+
+//     cell1.innerHTML += inValue;
+//     cell2.innerHTML=field;
+//     cell3.innerHTML=field;
+//     cell4.innerHTML=field;
+//     cell5.innerHTML=emtField;
+//     cell6.innerHTML=emtField;
+//     cell7.innerHTML=icon;
+
+//     const textFieldElement=[].slice.call(document.querySelectorAll(".mdc-text-field"));
+//     textFieldElement.forEach((textField1) => {
+//       mdc.textField.MDCTextField.attachTo(textField1);
+//     });
+//   }
+
+$(document).ready(function(){
+    //   $('#header').load('../header-ads.html');
+    //   $('#footer').load('../footer-ads.html');
+       jQuery(document).delegate('a.add-record', 'click', function(e) {
+       e.preventDefault();    
+       var content = jQuery('#sample_table tr'),
+       size = jQuery('#table >tbody >tr').length + 1,
+       element = null,    
+       element = content.clone();
+       element.attr('id', 'rec-'+size);
+       element.find('.delete-record').attr('data-id', size);
+       element.appendTo('#tbl_body');
+       element.find('.sn').html(size);
+
+        const textFieldElement=[].slice.call(document.querySelectorAll(".mdc-text-field"));
+        textFieldElement.forEach((textField1) => {
+        mdc.textField.MDCTextField.attachTo(textField1);
+        });
+
+     });
+      jQuery(document).delegate('a.delete-record', 'click', function(e) {
+       e.preventDefault();    
+    //    var didConfirm = confirm("Are you sure You want to delete");
+    //    if (didConfirm == true) {
+        var id = jQuery(this).attr('data-id');
+        var targetDiv = jQuery(this).attr('targetDiv');
+        jQuery('#rec-' + id).remove();
+        
+      //regnerate index number on table
+      $('#tbl_body tr').each(function(index){
+          $(this).find('span.sn').html(index+1);
+      });
+      return true;
+    // } 
+    // else {
+    //   return false;
+    // }
+  });
+    });
+
+ 
+</script>
+</html>
